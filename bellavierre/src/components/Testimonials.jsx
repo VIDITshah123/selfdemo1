@@ -31,7 +31,7 @@ const testimonials = [
 const StarRow = ({ count }) => (
   <div className="testimonial-stars">
     {Array.from({ length: count }).map((_, i) => (
-      <Star key={i} size={14} fill="#c9a84c" color="#c9a84c" />
+      <Star key={i} size={14} fill="#C0A882" color="#C0A882" />
     ))}
   </div>
 );

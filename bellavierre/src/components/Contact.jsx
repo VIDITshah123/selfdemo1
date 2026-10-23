@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, ArrowRight, CheckCircle } from 'lucide-react';
 
@@ -21,7 +21,7 @@ const contactDetails = [
   {
     icon: <Clock size={20} />,
     label: 'Working Hours',
-    value: 'Monday – Saturday: 9am – 7pm\nSunday: 11am – 5pm',
+    value: 'Monday â€“ Saturday: 9am â€“ 7pm\nSunday: 11am â€“ 5pm',
   },
 ];
 
@@ -97,7 +97,7 @@ export default function Contact() {
               color: 'rgba(255,255,255,0.3)',
               fontSize: 13,
             }}>
-              <MapPin size={28} style={{ color: 'var(--gold)', opacity: 0.6 }} />
+              <MapPin size={28} style={{ color: 'var(--champagne)', opacity: 0.6 }} />
               <span style={{ fontSize: 12, letterSpacing: '2px', textTransform: 'uppercase' }}>
                 Burj Al Arab Tower, Dubai
               </span>
@@ -128,7 +128,7 @@ export default function Contact() {
                   height: '100%',
                 }}
               >
-                <CheckCircle size={56} color="var(--gold)" />
+                <CheckCircle size={56} color="var(--champagne)" />
                 <h3 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 32, fontWeight: 300, color: 'var(--white)' }}>
                   Thank You!
                 </h3>
@@ -230,3 +230,4 @@ export default function Contact() {
     </section>
   );
 }
+

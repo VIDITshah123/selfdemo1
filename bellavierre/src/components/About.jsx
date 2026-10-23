@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const ABOUT_IMG = '/images/about_team_1792730260197.jpg';
 const ACCENT_IMG = '/images/property_penthouse_1792730187324.jpg';
 
-/* ── Animated Counter ─────────────────────── */
+/* â”€â”€ Animated Counter â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 function Counter({ end, suffix = '', duration = 2 }) {
   const ref = useRef(null);
   const started = useRef(false);
@@ -60,7 +60,7 @@ export default function About() {
         },
       });
 
-      // ── Main image reveal (cover slides away)
+      // â”€â”€ Main image reveal (cover slides away)
       tl.fromTo(coverMainRef.current,
         { scaleX: 1, transformOrigin: 'right' },
         { scaleX: 0, duration: 1.2, ease: 'power3.inOut' },
@@ -72,7 +72,7 @@ export default function About() {
         0
       );
 
-      // ── Accent image reveal
+      // â”€â”€ Accent image reveal
       tl.fromTo(coverAccentRef.current,
         { scaleX: 1, transformOrigin: 'right' },
         { scaleX: 0, duration: 1.1, ease: 'power3.inOut' },
@@ -84,21 +84,21 @@ export default function About() {
         0.3
       );
 
-      // ── Badge float in
+      // â”€â”€ Badge float in
       tl.fromTo(badgeRef.current,
         { opacity: 0, x: -30, y: 10 },
         { opacity: 1, x: 0, y: 0, duration: 0.8, ease: 'back.out(1.7)' },
         0.7
       );
 
-      // ── Content stagger
+      // â”€â”€ Content stagger
       tl.fromTo(contentRef.current?.children,
         { opacity: 0, y: 40 },
         { opacity: 1, y: 0, stagger: 0.12, duration: 0.8, ease: 'power3.out' },
         0.4
       );
 
-      // ── Subtle parallax on image
+      // â”€â”€ Subtle parallax on image
       gsap.to(imgMainRef.current, {
         y: -60,
         ease: 'none',
@@ -118,7 +118,7 @@ export default function About() {
     <section ref={sectionRef} className="about-section" id="about">
       <div className="container">
         <div className="about-grid">
-          {/* ── Image Column ── */}
+          {/* â”€â”€ Image Column â”€â”€ */}
           <div className="about-image-wrap" style={{ position: 'relative' }}>
             {/* Gold floating badge */}
             <div ref={badgeRef} className="about-badge floating-badge" style={{ opacity: 0 }}>
@@ -138,7 +138,7 @@ export default function About() {
               <div
                 ref={coverMainRef}
                 className="img-reveal-cover"
-                style={{ background: 'var(--gold)', position: 'absolute', inset: 0, zIndex: 2 }}
+                style={{ background: 'var(--champagne)', position: 'absolute', inset: 0, zIndex: 2 }}
               />
             </div>
 
@@ -155,12 +155,12 @@ export default function About() {
               />
               <div
                 ref={coverAccentRef}
-                style={{ background: '#9d7a2e', position: 'absolute', inset: 0, zIndex: 2 }}
+                style={{ background: '#C0A882', position: 'absolute', inset: 0, zIndex: 2 }}
               />
             </div>
           </div>
 
-          {/* ── Content Column ── */}
+          {/* â”€â”€ Content Column â”€â”€ */}
           <div ref={contentRef} className="about-content">
             <div className="eyebrow">
               <span className="gold-line" />
@@ -173,7 +173,7 @@ export default function About() {
             </h2>
 
             <p className="about-text">
-              Bellavierre Real Estate was founded on a singular belief — that every client
+              Bellavierre Real Estate was founded on a singular belief â€” that every client
               deserves nothing less than the finest. For over 15 years, we have been the trusted
               advisors for discerning buyers, sellers, and investors across Dubai's most
               prestigious addresses.
@@ -210,7 +210,7 @@ export default function About() {
                   <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 26, color: 'rgba(255,255,255,0.85)', marginBottom: 4 }}>
                     {p.name}
                   </div>
-                  <div style={{ fontSize: 10, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--gold)' }}>
+                  <div style={{ fontSize: 10, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--champagne)' }}>
                     {p.role}
                   </div>
                 </div>
@@ -232,3 +232,4 @@ export default function About() {
     </section>
   );
 }
+

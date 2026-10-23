@@ -1,42 +1,89 @@
-/* ===================================================
-   BELLAVIERRE REAL ESTATE — Global Design System
+﻿/* ===================================================
+   BELLAVIERRE REAL ESTATE â€” Global Design System
    =================================================== */
 
 :root {
-  /* Color Palette */
-  --gold-light: #f5d07a;
-  --gold: #c9a84c;
-  --gold-dark: #9d7a2e;
-  --gold-gradient: linear-gradient(135deg, #f5d07a 0%, #c9a84c 40%, #9d7a2e 100%);
-  --gold-gradient-h: linear-gradient(90deg, #f5d07a 0%, #c9a84c 50%, #f5d07a 100%);
-  
-  --dark-900: #050505;
-  --dark-800: #0a0a0a;
-  --dark-700: #111111;
-  --dark-600: #1a1a1a;
-  --dark-500: #222222;
-  --dark-400: #2d2d2d;
-  
-  --cream: #f8f5ef;
-  --cream-dark: #ede8de;
-  
-  --white: #ffffff;
-  --text-muted: rgba(255,255,255,0.5);
-  --text-light: rgba(255,255,255,0.75);
-  
-  /* Spacing */
+  /* â”€â”€ Old Money Colour Palette â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+     Inspired by Aman Resorts Â· Sotheby's Realty Â· The Connaught
+     Refined, editorial, zero neon â€” warmth through restraint
+  â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+
+  /* Champagne accent â€” replaces ALL gold references */
+  --champagne:          #C0A882;
+  --champagne-light:    #D5C4A8;
+  --champagne-deep:     #9C8468;
+  --champagne-muted:    rgba(192, 168, 130, 0.15);
+
+  /* Primary dark tones (forest/charcoal, not pure black) */
+  --noir-900:  #0E1512;    /* deepest â€” almost black with green warmth */
+  --noir-800:  #141C19;    /* main dark bg */
+  --noir-700:  #1A2520;    /* elevated dark bg â€” forest green tint */
+  --noir-600:  #212E29;
+  --noir-500:  #2E3D38;
+  --noir-400:  #3D5048;
+
+  /* Warm ivories (light mode sections) */
+  --ivory:          #F7F3EC;
+  --ivory-warm:     #EDE9E0;
+  --ivory-deep:     #DDD8CC;
+
+  /* Typographic tones */
+  --ink:        #2A2520;    /* warm charcoal â€” never harsh black */
+  --ink-mid:    rgba(42, 37, 32, 0.72);
+  --ink-muted:  rgba(42, 37, 32, 0.44);
+
+  /* On-dark type */
+  --white:        #FAF8F5;   /* warm white, not clinical #ffffff */
+  --white-mid:    rgba(250, 248, 245, 0.70);
+  --white-muted:  rgba(250, 248, 245, 0.40);
+
+  /* Border tones */
+  --border-light:   rgba(250, 248, 245, 0.08);
+  --border-warm:    rgba(192, 168, 130, 0.20);
+  --border-ink:     rgba(42, 37, 32, 0.10);
+
+  /* â”€â”€ Typography â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* Display: Bodoni Moda â€” editorial contrast serif (Vogue, Sotheby's) */
+  --font-serif: 'Bodoni Moda', 'Cormorant', Georgia, serif;
+  /* Body: Jost â€” refined geometric sans (Chanel, Aman) */
+  --font-sans:  'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Long body: Cormorant for longer editorial passages */
+  --font-editorial: 'Cormorant', Georgia, serif;
+
+  /* â”€â”€ Spacing â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   --section-padding: 120px;
   --section-padding-mobile: 70px;
-  
-  /* Typography */
-  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  
-  /* Transitions */
+
+  /* â”€â”€ Transitions â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   --transition-fast: 0.2s ease;
-  --transition-base: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.45s cubic-bezier(0.25, 0, 0.1, 1);
+  --transition-slow: 0.75s cubic-bezier(0.25, 0, 0.1, 1);
+
+  /* â”€â”€ Legacy Alias Map (keeps old classes working) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* All "gold" references now map to champagne */
+  --gold:           var(--champagne);
+  --gold-light:     var(--champagne-light);
+  --gold-dark:      var(--champagne-deep);
+  --gold-gradient:  var(--champagne);
+  --gold-gradient-h: var(--champagne);
+
+  /* Dark bg aliases */
+  --dark-900: var(--noir-900);
+  --dark-800: var(--noir-800);
+  --dark-700: var(--noir-700);
+  --dark-600: var(--noir-600);
+  --dark-500: var(--noir-500);
+  --dark-400: var(--noir-400);
+
+  /* Ivory aliases */
+  --cream:      var(--ivory);
+  --cream-dark: var(--ivory-warm);
+
+  /* Text aliases */
+  --text-muted: var(--white-muted);
+  --text-light: var(--white-mid);
 }
+
 
 /* ===================================================
    RESET & BASE
@@ -55,9 +102,10 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background: var(--dark-800);
+  font-weight: 300;
+  background: var(--noir-800);
   color: var(--white);
-  line-height: 1.6;
+  line-height: 1.65;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -85,14 +133,14 @@ button {
    SCROLLBAR
    =================================================== */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--dark-800);
+  background: var(--noir-800);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--gold);
-  border-radius: 3px;
+  background: var(--champagne-deep);
+  border-radius: 2px;
 }
 
 /* ===================================================
@@ -100,19 +148,19 @@ button {
    =================================================== */
 .serif { font-family: var(--font-serif); }
 .sans  { font-family: var(--font-sans); }
+.editorial { font-family: var(--font-editorial); }
 
+/* Old money: flat colour, no background-clip gradient trick */
 .gold-text {
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--champagne);
 }
 
 .gold-line {
   display: inline-block;
-  width: 60px;
+  width: 48px;
   height: 1px;
-  background: var(--gold-gradient-h);
+  background: var(--champagne);
+  opacity: 0.7;
 }
 
 /* ===================================================
@@ -123,78 +171,64 @@ button {
   align-items: center;
   gap: 14px;
   font-family: var(--font-sans);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 3px;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--champagne);
+  /* No gradient text â€” old money uses flat, dignified colour */
 }
 
 /* ===================================================
-   BUTTONS
+   BUTTONS â€” Old Money style: understated borders, no fills
    =================================================== */
 .btn-primary {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 16px 40px;
-  background: var(--gold-gradient);
-  color: var(--dark-900);
+  gap: 12px;
+  padding: 15px 42px;
+  background: var(--champagne);
+  color: var(--noir-900);
   font-family: var(--font-sans);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
-}
-
-.btn-primary::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
-  transform: translateX(-100%);
-  transition: transform 0.5s ease;
-}
-
-.btn-primary:hover::before {
-  transform: translateX(100%);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), background var(--transition-base);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 20px 60px rgba(201, 168, 76, 0.4);
+  background: var(--champagne-light);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 40px rgba(192, 168, 130, 0.25);
 }
 
 .btn-outline {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 15px 38px;
+  gap: 12px;
+  padding: 14px 40px;
   background: transparent;
-  color: var(--gold-light);
+  color: var(--champagne-light);
   font-family: var(--font-sans);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  border: 1px solid rgba(201, 168, 76, 0.5);
+  border: 1px solid rgba(192, 168, 130, 0.4);
   cursor: pointer;
   transition: all var(--transition-base);
 }
 
 .btn-outline:hover {
-  background: rgba(201, 168, 76, 0.1);
-  border-color: var(--gold);
-  color: var(--gold);
-  transform: translateY(-2px);
+  background: rgba(192, 168, 130, 0.08);
+  border-color: var(--champagne);
+  color: var(--champagne-light);
+  transform: translateY(-1px);
 }
 
 /* ===================================================
@@ -219,7 +253,7 @@ button {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(201, 168, 76, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(192, 168, 130, 0.05) 0%, transparent 70%);
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
@@ -259,7 +293,7 @@ button {
   left: 0;
   top: 0;
   height: 100%;
-  background: var(--gold-gradient-h);
+  background: var(--champagne);
 }
 
 .loader-text {
@@ -289,10 +323,10 @@ button {
 }
 
 .navbar.scrolled {
-  background: rgba(5, 5, 5, 0.95);
+  background: rgba(14, 21, 18, 0.96);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+  border-bottom: 1px solid rgba(192, 168, 130, 0.10);
 }
 
 .navbar-inner {
@@ -308,7 +342,8 @@ button {
   height: 52px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 0 10px rgba(201, 168, 76, 0.3));
+  /* Warm glow â€” not garish gold neon */
+  filter: drop-shadow(0 2px 12px rgba(192, 168, 130, 0.15));
 }
 
 .navbar-links {
@@ -319,11 +354,11 @@ button {
 }
 
 .navbar-links a {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 2px;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.7);
+  color: var(--white-mid);
   transition: color var(--transition-fast);
   position: relative;
 }
@@ -335,12 +370,12 @@ button {
   left: 0;
   width: 0;
   height: 1px;
-  background: var(--gold-gradient-h);
+  background: var(--champagne);
   transition: width var(--transition-base);
 }
 
 .navbar-links a:hover {
-  color: var(--gold-light);
+  color: var(--champagne-light);
 }
 
 .navbar-links a:hover::after {
@@ -348,21 +383,21 @@ button {
 }
 
 .navbar-cta {
-  padding: 10px 26px;
+  padding: 10px 28px;
   background: transparent;
-  border: 1px solid rgba(201, 168, 76, 0.4);
-  color: var(--gold-light);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 2px;
+  border: 1px solid rgba(192, 168, 130, 0.35);
+  color: var(--champagne-light);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 3px;
   text-transform: uppercase;
   cursor: pointer;
   transition: all var(--transition-base);
 }
 
 .navbar-cta:hover {
-  background: var(--gold-gradient);
-  color: var(--dark-900);
+  background: var(--champagne);
+  color: var(--noir-900);
   border-color: transparent;
 }
 
@@ -377,8 +412,8 @@ button {
 .navbar-hamburger span {
   display: block;
   width: 24px;
-  height: 1.5px;
-  background: var(--gold-light);
+  height: 1px;
+  background: var(--champagne-light);
   transition: all var(--transition-base);
 }
 
@@ -386,13 +421,13 @@ button {
 .mobile-menu {
   position: fixed;
   inset: 0;
-  background: var(--dark-900);
+  background: var(--noir-900);
   z-index: 999;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 44px;
   transform: translateX(100%);
   transition: transform var(--transition-slow);
 }
@@ -403,22 +438,23 @@ button {
 
 .mobile-menu a {
   font-family: var(--font-serif);
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 300;
-  color: rgba(255,255,255,0.8);
+  letter-spacing: 0.04em;
+  color: var(--white-mid);
   transition: color var(--transition-fast);
 }
 
 .mobile-menu a:hover {
-  color: var(--gold-light);
+  color: var(--champagne-light);
 }
 
 .mobile-menu-close {
   position: absolute;
   top: 30px;
   right: 40px;
-  font-size: 24px;
-  color: var(--gold-light);
+  font-size: 22px;
+  color: var(--champagne);
   cursor: pointer;
   background: none;
   border: none;
@@ -454,9 +490,9 @@ button {
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(5,5,5,0.85) 0%,
-    rgba(5,5,5,0.6) 50%,
-    rgba(5,5,5,0.3) 100%
+    rgba(10, 14, 12, 0.88) 0%,
+    rgba(10, 14, 12, 0.58) 50%,
+    rgba(10, 14, 12, 0.22) 100%
   );
   z-index: 1;
 }
@@ -467,7 +503,7 @@ button {
   left: 0;
   right: 0;
   height: 300px;
-  background: linear-gradient(to top, var(--dark-800), transparent);
+  background: linear-gradient(to top, var(--noir-800), transparent);
   z-index: 2;
 }
 
@@ -489,17 +525,18 @@ button {
 }
 
 .hero-eyebrow-text {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 4px;
+  font-size: 9.5px;
+  font-weight: 400;
+  letter-spacing: 5px;
   text-transform: uppercase;
-  color: var(--gold-light);
+  color: var(--champagne);
 }
 
 .hero-eyebrow-line {
   width: 50px;
   height: 1px;
-  background: var(--gold-gradient-h);
+  background: var(--champagne);
+  opacity: 0.55;
 }
 
 .hero-title {
@@ -515,10 +552,8 @@ button {
 
 .hero-title em {
   font-style: italic;
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--champagne-light);
+  /* Old money: flat tonal accent, no gradient clip effect */
 }
 
 .hero-subtitle {
@@ -557,10 +592,7 @@ button {
   font-family: var(--font-serif);
   font-size: 38px;
   font-weight: 300;
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--champagne-light);
   line-height: 1;
 }
 
@@ -597,7 +629,7 @@ button {
 .hero-scroll-line {
   width: 1px;
   height: 60px;
-  background: linear-gradient(to bottom, rgba(201,168,76,0.6), transparent);
+  background: linear-gradient(to bottom, rgba(192, 168, 130, 0.55), transparent);
   animation: scrollLine 2s ease infinite;
 }
 
@@ -709,7 +741,7 @@ button {
 
 .search-btn {
   padding: 14px 36px;
-  background: var(--gold-gradient);
+  background: var(--champagne);
   color: var(--dark-900);
   font-size: 11px;
   font-weight: 700;
@@ -760,7 +792,7 @@ button {
   left: 0;
   right: 0;
   height: 2px;
-  background: var(--gold-gradient-h);
+  background: var(--champagne);
   transform: scaleX(0);
   transition: transform var(--transition-base);
 }
@@ -833,7 +865,7 @@ button {
 
 .section-title em {
   font-style: italic;
-  background: var(--gold-gradient);
+  background: var(--champagne);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -891,7 +923,7 @@ button {
   top: 20px;
   left: 20px;
   padding: 6px 14px;
-  background: var(--gold-gradient);
+  background: var(--champagne);
   color: var(--dark-900);
   font-size: 9px;
   font-weight: 700;
@@ -959,7 +991,7 @@ button {
   font-family: var(--font-serif);
   font-size: 26px;
   font-weight: 400;
-  background: var(--gold-gradient);
+  background: var(--champagne);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -985,7 +1017,7 @@ button {
 }
 
 .property-card:hover .property-arrow {
-  background: var(--gold-gradient);
+  background: var(--champagne);
   color: var(--dark-900);
   border-color: transparent;
 }
@@ -1040,7 +1072,7 @@ button {
 
 .parallax-banner-title em {
   font-style: italic;
-  background: var(--gold-gradient);
+  background: var(--champagne);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1092,7 +1124,7 @@ button {
   position: absolute;
   top: 40px;
   left: -20px;
-  background: var(--gold-gradient);
+  background: var(--champagne);
   padding: 20px 24px;
   display: flex;
   flex-direction: column;
@@ -1146,7 +1178,7 @@ button {
   font-family: var(--font-serif);
   font-size: 36px;
   font-weight: 300;
-  background: var(--gold-gradient);
+  background: var(--champagne);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1567,7 +1599,7 @@ button {
 }
 
 /* ===================================================
-   RESPONSIVE — Tablet (≤1024px)
+   RESPONSIVE â€” Tablet (â‰¤1024px)
    =================================================== */
 @media (max-width: 1024px) {
   :root {
@@ -1638,7 +1670,7 @@ button {
 }
 
 /* ===================================================
-   RESPONSIVE — Mobile (≤768px)
+   RESPONSIVE â€” Mobile (â‰¤768px)
    =================================================== */
 @media (max-width: 768px) {
   :root {
@@ -1773,7 +1805,7 @@ button {
 }
 
 /* ===================================================
-   RESPONSIVE — Small Mobile (≤480px)
+   RESPONSIVE â€” Small Mobile (â‰¤480px)
    =================================================== */
 @media (max-width: 480px) {
   :root {
@@ -1803,7 +1835,7 @@ button {
 .gold-divider {
   width: 80px;
   height: 1px;
-  background: var(--gold-gradient-h);
+  background: var(--champagne);
   margin: 20px 0;
 }
 
@@ -1873,7 +1905,7 @@ button {
   right: 32px;
   width: 48px;
   height: 48px;
-  background: var(--gold-gradient);
+  background: var(--champagne);
   color: var(--dark-900);
   display: flex;
   align-items: center;
@@ -1896,3 +1928,4 @@ button {
   transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(201,168,76,0.4);
 }
+
