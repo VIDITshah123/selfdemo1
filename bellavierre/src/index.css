@@ -1,4 +1,4 @@
-﻿/* ===================================================
+/* ===================================================
    BELLAVIERRE REAL ESTATE â€” Global Design System
    =================================================== */
 
@@ -645,8 +645,11 @@ button {
 .search-section {
   position: relative;
   z-index: 10;
-  margin-top: -60px;
+  /* Removed negative margin — was causing hero overlap */
+  margin-top: 0;
   padding: 0 40px;
+  background: var(--noir-800);
+  border-bottom: 1px solid var(--border-light);
 }
 
 .search-wrapper {
@@ -655,10 +658,10 @@ button {
 }
 
 .search-card {
-  background: rgba(15,15,15,0.95);
-  border: 1px solid rgba(201,168,76,0.15);
-  backdrop-filter: blur(20px);
-  padding: 36px 40px;
+  background: transparent;
+  border: none;
+  backdrop-filter: none;
+  padding: 32px 0;
 }
 
 .search-tabs {
@@ -682,8 +685,8 @@ button {
 }
 
 .search-tab.active {
-  color: var(--gold-light);
-  border-bottom-color: var(--gold);
+  color: var(--champagne-light);
+  border-bottom-color: var(--champagne);
 }
 
 .search-tab:hover {
@@ -705,10 +708,10 @@ button {
 
 .search-field label {
   font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-weight: 400;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--champagne);
 }
 
 .search-field select,
@@ -732,7 +735,7 @@ button {
 
 .search-field select:focus,
 .search-field input:focus {
-  border-color: rgba(201,168,76,0.5);
+  border-color: rgba(192, 168, 130, 0.45);
 }
 
 .search-field input::placeholder {
@@ -757,8 +760,8 @@ button {
 }
 
 .search-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(201,168,76,0.35);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 32px rgba(192, 168, 130, 0.25);
 }
 
 /* ===================================================
